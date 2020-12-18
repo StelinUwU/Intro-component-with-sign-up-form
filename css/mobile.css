@@ -1,0 +1,27 @@
+.info__login-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.info{
+  margin-bottom: 80px;
+} 
+.info span{
+  font-size: 45px;
+  font-weight: 800;
+} 
+.info p{
+  font-size: 20px;
+  font-weight: 400;
+} 
+.form-container{
+  padding-right: 0;
+}
+.promo{
+  font-size: 20px;
+  height: 60px;
+}
+
+.promo span{
+  font-weight: 700;
+}
