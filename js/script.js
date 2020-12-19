@@ -16,8 +16,7 @@ function comprobacion(e){
 
  parametros.forEach( (parametro) =>{
     if(parametro.value === ""){
-      console.log("Todos los campos son obligatorios")
-      vacio(parametro, )
+      vacio(parametro)
       parametro.classList.add("error")
       completado = false;
       return
@@ -25,11 +24,9 @@ function comprobacion(e){
   } )
 
   if(completado){
-    if(emailRegex.test(email.value)){
-      console.log("valido")
-    }else{
+    if(!emailRegex.test(email.value)){
       email.classList.add("error")
-      emailError()
+      emailError(parametro)
     }
   }
 }
@@ -42,10 +39,11 @@ function vacio(parametro){
   form.insertBefore(error, form.children[15])
   setTimeout( ()=>{
     error.remove()
+    parametro.classList.remove("error")
   }, 5000)
 }
 
-function emailError(){
+function emailError(parametro){
   const error = document.createElement("p")
   error.innerHTML = `
   <img src="images/icon-error.svg"></img> Looks like this is not an email 
@@ -53,5 +51,6 @@ function emailError(){
   form.insertBefore(error, form.children[15])
   setTimeout( ()=>{
     error.remove()
+    parametro.classList.remove("error")
   }, 5000)
 }

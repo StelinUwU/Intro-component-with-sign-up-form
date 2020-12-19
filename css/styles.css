@@ -10,6 +10,10 @@
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+*{
+  box-sizing: border-box;
+}
+
 body{
   background-color: var(--red);
   font-family: var(--font);
@@ -77,21 +81,21 @@ form input{
   border: 1px solid var(--grayishBlue);
   font-family: var(--font);
   outline: none;
-
-  
 }
+
 form button{
   align-self: center;
   margin-top: 35px;
   outline: none;
   border: none;
-  width: 104%;
+  width: 100%;
   height: 50px;
   font-family: var(--font);
   font-size: 20px;
   border-radius: 5px;
   background-color: var(--green);
   color: white;
+  cursor: pointer;
 }
 
 form p{
