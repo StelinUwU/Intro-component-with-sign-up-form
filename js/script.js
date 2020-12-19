@@ -22,12 +22,9 @@ function comprobacion(e){
       return
     }
   } )
-
-  if(completado){
-    if(!emailRegex.test(email.value)){
-      email.classList.add("error")
-      emailError(parametro)
-    }
+  if(!emailRegex.test(email.value)){
+    email.classList.add("error")
+    emailError()
   }
 }
 
@@ -51,6 +48,6 @@ function emailError(parametro){
   form.insertBefore(error, form.children[15])
   setTimeout( ()=>{
     error.remove()
-    parametro.classList.remove("error")
+    email.classList.remove("error")
   }, 5000)
 }
